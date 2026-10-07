@@ -1,0 +1,13 @@
+# Compiled output
+build/
+bin/
+*.class
+
+# Movie posters and trailers (not included in the repository)
+src/main/webapp/video/
+src/main/webapp/test/
+src/main/webapp/image/*.jpg
+
+# OS files
+Thumbs.db
+.DS_Store

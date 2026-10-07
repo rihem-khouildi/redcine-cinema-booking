@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #4e0d92, #2a144d);
+            color: #fff;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 40px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff4747;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: url('images/cinema-screen.png') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .cinema-section {
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), #000);
+            color: #fff;
+            backdrop-filter: blur(5px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cinema-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/cinema-screen.png') no-repeat center center;
+            background-size: cover;
+            filter: blur(10px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .cinema-card {
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cinema-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .cinema-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #ff4747;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="UserHomePage.jsp">MovieBooking</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="movie"><i class="fas fa-film"></i> Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cinema.html"><i class="fas fa-theater-masks"></i> Cinemas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-tags"></i> Offers</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.jsp"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link profile-icon" href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Discover Our Cinemas</h1>
+        <p>Experience the best movie viewing in your favorite cinemas.</p>
+    </div>
+
+    <!-- Cinemas Section -->
+    <div class="cinema-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Cinemas</h2>
+            <div class="row">
+                <!-- Cinema Card 1 -->
+                <div class="col-md-4">
+                    <div class="cinema-card">
+                        <img src="images/cinema-tuniscity.jpg" alt="Cinema 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pathé Tunis City</h5>
+                            <p>Location: Geant Tunis city</p>
+                            <a href="CinemaDetails.jsp?id=1" class="btn btn-outline-light btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cinema Card 2 -->
+                <div class="col-md-4">
+                    <div class="cinema-card">
+                        <img src="images/cinema-azur.jpg" alt="Cinema 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Pathé Azur City</h5>
+                            <p>Location: Azur City</p>
+                            <a href="CinemaDetails.jsp?id=2" class="btn btn-outline-light btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cinema Card 3 -->
+                <div class="col-md-4">
+                    <div class="cinema-card">
+                        <img src="images/cinema-citeculture.jpg" alt="Cinema 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Cinema of Culture City </h5>
+                            <p>Location: Culture City r</p>
+                            <a href="CinemaDetails.jsp?id=3" class="btn btn-outline-light btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MovieBooking. All rights reserved.</p>
+        <p>Follow us on <a href="#">Twitter</a>, <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
