@@ -46,5 +46,5 @@ Tables are created automatically by Hibernate on first deployment.
 
 ## Authors
 
-- **Rihem Khouildi** — [GitHub](https://github.com/rihem-khouildi)
+- **Rihem Khouildi** 
 - **Maram Dahmen** 
