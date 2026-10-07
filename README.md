@@ -2,6 +2,10 @@
 
 RedCiné is a web application for browsing movies and booking cinema seats, built with Jakarta EE following the MVC pattern. It was developed as an academic project at the National Engineering School of Tunis (ENIT).
 
+## Demo
+
+https://github.com/user-attachments/assets/27286b94-2338-48de-b092-6fa9a48f7fb5
+
 ## Features
 
 - User sign-up, login and logout
